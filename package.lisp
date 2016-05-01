@@ -1,5 +1,6 @@
 ;;;; package.lisp
 
 (defpackage #:calculator
-  (:use #:cl))
+  (:use #:cl)
+  (:export :menu))
 
