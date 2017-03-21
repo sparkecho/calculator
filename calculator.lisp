@@ -8,11 +8,11 @@
   (welcome-prompt)
   (prompt)
   (do ((expr (expr-reader) (expr-reader)))
-	  (nil)
-	(cond ((string-equal expr "help") (help))
-		  ((string-equal expr "exit") (return (princ "Bye.")))
-		  (t (print-result (calculate expr))
-			 (prompt)))))
+      (nil)
+    (cond ((string-equal expr "help") (help))
+          ((string-equal expr "exit") (return (princ "Bye.")))
+          (t (print-result (calculate expr))
+             (prompt)))))
 
 
 ;; Calculate: calculate the prefix expression of Lisp to a result.
@@ -41,23 +41,23 @@
 ;; Print the help message.
 (defun help ()
   (format t "~&Help:
-	+                         加法
-	-                         减法
-	*                         乘法
-	/                         除法
-	^                         乘方
-	%                         取模运算
-	!                         阶乘
-	=                         判等
-	&                         按位与运算
-	|                         按位或运算
-	~a                         按位取反
-	&&                        逻辑与运算
-	||                        逻辑或运算
-	!                         逻辑非运算
-	()                        括号
-	fib(n)                    计算第 n 个斐波那契数
-	sqrt(n)                   计算 n 的平方根
-	cbrt(n)                   计算 n 的立方根
+        +                         加法
+        -                         减法
+        *                         乘法
+        /                         除法
+        ^                         乘方
+        %                         取模运算
+        !                         阶乘
+        =                         判等
+        &                         按位与运算
+        |                         按位或运算
+        ~a                         按位取反
+        &&                        逻辑与运算
+        ||                        逻辑或运算
+        !                         逻辑非运算
+        ()                        括号
+        fib(n)                    计算第 n 个斐波那契数
+        sqrt(n)                   计算 n 的平方根
+        cbrt(n)                   计算 n 的立方根
 " #\~)
   (force-output))
